@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgNum"
+        android:layout_width="190dp"
+        android:layout_height="152dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="102dp"
+        android:layout_marginLeft="102dp"
+        android:layout_marginTop="10dp"
+        android:background="#000000" />
+
+    <TextView
+        android:id="@+id/txtSelectedNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgNum"
+        android:layout_alignEnd="@+id/imgNum"
+
+        android:layout_alignRight="@+id/imgNum"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:text="Selected num"
+        android:textAlignment="center"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSelectedNum"
+        android:layout_alignEnd="@+id/txtSelectedNum"
+
+        android:layout_alignRight="@+id/txtSelectedNum"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:text="Score"
+        android:textAlignment="center"
+        android:textSize="17sp" />
+</RelativeLayout>
