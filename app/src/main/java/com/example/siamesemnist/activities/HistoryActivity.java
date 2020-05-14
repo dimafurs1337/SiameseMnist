@@ -1,4 +1,4 @@
-package com.example.siamesemnist;
+package com.example.siamesemnist.activities;
 
 import android.database.Cursor;
 import android.os.Bundle;
@@ -13,6 +13,10 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.siamesemnist.views.HistoryItem;
+import com.example.siamesemnist.R;
+import com.example.siamesemnist.views.RecyclerViewAdapter;
 
 import java.util.ArrayList;
 

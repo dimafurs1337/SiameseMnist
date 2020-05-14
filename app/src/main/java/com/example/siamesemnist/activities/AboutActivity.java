@@ -1,4 +1,4 @@
-package com.example.siamesemnist;
+package com.example.siamesemnist.activities;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,6 +7,8 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.siamesemnist.R;
 
 public class AboutActivity extends AppCompatActivity {
 

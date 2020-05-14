@@ -1,4 +1,4 @@
-package com.example.siamesemnist;
+package com.example.siamesemnist.database;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 
 public class SQLiteHelper extends SQLiteOpenHelper {
 
-    static final String dbName = "HistoryDB.sqlite";
+    public static final String dbName = "HistoryDB.sqlite";
     private final String createDB = "CREATE TABLE IF NOT EXISTS HISTORY(Id INTEGER PRIMARY KEY AUTOINCREMENT, selectedNum VARCHAR, score VARCHAR, image BLOG)";
     private final String selectAll = "SELECT * FROM HISTORY";
     private final String insertData = "INSERT INTO HISTORY VALUES (NULL,?,?,?)";

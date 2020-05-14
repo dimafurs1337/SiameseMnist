@@ -1,4 +1,4 @@
-package com.example.siamesemnist;
+package com.example.siamesemnist.model;
 
 import android.graphics.Bitmap;
 
@@ -6,9 +6,9 @@ import java.io.ByteArrayOutputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-class ImageUtils {
+public class ImageUtils {
 
-    static void convertBitmapToByteBuffer(Bitmap bitmap, ByteBuffer inputImage, int[] imagePixels) {
+    public static void convertBitmapToByteBuffer(Bitmap bitmap, ByteBuffer inputImage, int[] imagePixels) {
         inputImage.rewind();
 
         bitmap.getPixels(imagePixels, 0, bitmap.getWidth(), 0, 0,
@@ -32,14 +32,14 @@ class ImageUtils {
         return grayscaleValue / 255.0f;
     }
 
-    static ByteBuffer allocateTensor(){
+    public static ByteBuffer allocateTensor(){
         ByteBuffer inputImage =
                 ByteBuffer.allocateDirect(4 * 28 * 28);
         inputImage.order(ByteOrder.nativeOrder());
         return inputImage;
     }
 
-    static byte[] imageToByte(Bitmap scaledBitmap){
+    public static byte[] imageToByte(Bitmap scaledBitmap){
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         scaledBitmap.compress(Bitmap.CompressFormat.PNG,100, stream);
         return stream.toByteArray();

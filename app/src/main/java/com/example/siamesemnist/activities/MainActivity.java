@@ -1,4 +1,4 @@
-package com.example.siamesemnist;
+package com.example.siamesemnist.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.ColorSpace;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,7 +16,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.siamesemnist.model.ImageUtils;
+import com.example.siamesemnist.model.Model;
+
+import com.example.siamesemnist.views.CustomView;
+import com.example.siamesemnist.R;
+import com.example.siamesemnist.database.SQLiteHelper;
 
 import org.tensorflow.lite.Interpreter;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.example.siamesemnist;
+package com.example.siamesemnist.views;
 
 public class HistoryItem {
     private int id;

@@ -1,4 +1,4 @@
-package com.example.siamesemnist;
+package com.example.siamesemnist.views;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

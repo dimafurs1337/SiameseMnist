@@ -1,4 +1,4 @@
-package com.example.siamesemnist;
+package com.example.siamesemnist.views;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.siamesemnist.R;
 
 import java.util.ArrayList;
 

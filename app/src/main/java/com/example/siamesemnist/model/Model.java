@@ -1,10 +1,12 @@
-package com.example.siamesemnist;
+package com.example.siamesemnist.model;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+
+import com.example.siamesemnist.R;
 
 import org.tensorflow.lite.Interpreter;
 
@@ -16,9 +18,9 @@ import java.nio.channels.FileChannel;
 import java.util.HashMap;
 import java.util.Map;
 
-class Model {
+public class Model {
 
-    static MappedByteBuffer loadModelFile(Context context) throws IOException {
+    public static MappedByteBuffer loadModelFile(Context context) throws IOException {
         String MODEL_ASSETS_PATH = "23_new_model.tflite";
         AssetFileDescriptor assetFileDescriptor = context.getAssets().openFd(MODEL_ASSETS_PATH) ;
         FileInputStream fileInputStream = new FileInputStream( assetFileDescriptor.getFileDescriptor() ) ;
@@ -28,13 +30,13 @@ class Model {
         return fileChannel.map( FileChannel.MapMode.READ_ONLY , startoffset , declaredLength ) ;
     }
 
-    static float predict(Interpreter interpreter, Context context, int selectedNumber, ByteBuffer inputImage1, ByteBuffer inputImage2, Bitmap scaledBitmap){
+    public static float predict(Interpreter interpreter, Context context, int selectedNumber, ByteBuffer inputImage1, ByteBuffer inputImage2, Bitmap scaledBitmap){
         scaledBitmap = Bitmap.createScaledBitmap( scaledBitmap , 28 , 28 , false );
         int[] imagePixels1 = new int[28 * 28];
         int[] imagePixels2 = new int[28 * 28];
         ImageUtils.convertBitmapToByteBuffer(scaledBitmap, inputImage2, imagePixels2);
         float result = 1;
-        Bitmap sample =  BitmapFactory.decodeResource(context.getResources(),R.drawable.image00);
+        Bitmap sample =  BitmapFactory.decodeResource(context.getResources(), R.drawable.image00);
 
         for (int i=0; i<5;i++){
             String sampleName = "image"+String.valueOf(selectedNumber)+String.valueOf(i)+".png";
