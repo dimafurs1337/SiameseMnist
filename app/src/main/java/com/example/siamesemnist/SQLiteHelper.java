@@ -51,7 +51,12 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.rawQuery(createDB, null);
+        db.execSQL(createDB);
+    }
+
+    @Override
+    public void onOpen(SQLiteDatabase db) {
+        onCreate(db);
     }
 
     @Override
